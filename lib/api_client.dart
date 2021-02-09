@@ -223,7 +223,8 @@ class ApiClient {
       final contentType = nullableContentType;
       headerParams['Content-Type'] = contentType;
     }
-
+    
+    headerParams.remove("If-Modified-Since");
     if(body is MultipartRequest) {
       var request = MultipartRequest(method, Uri.parse(url));
       request.fields.addAll(body.fields);
