@@ -156,14 +156,13 @@ class ApiClient {
           return ZebraTeam.fromJson(value);
         default:
           {
-            Match match;
             if (value is List &&
-                (match = _regList.firstMatch(targetType) as Match) != null) {
-              var newTargetType = match;
-              return value.map((v) => _deserialize(v, newTargetType.toString())).toList();
+               _regList.firstMatch(targetType) != null) {
+              var newTargetType = targetType.substring(targetType.indexOf('<')+1,targetType.indexOf('>'));
+              return value.map((v) => _deserialize(v, newTargetType)).toList();
             } else if (value is Map &&
-                (match = _regMap.firstMatch(targetType) as Match) != null) {
-              var newTargetType = match;
+                (_regMap.firstMatch(targetType) != null)) {
+              var newTargetType = targetType.substring(targetType.indexOf('<')+1,targetType.indexOf('>'));
               return Map.fromIterables(value.keys,
                   value.values.map((v) => _deserialize(v, newTargetType.toString())));
             }
