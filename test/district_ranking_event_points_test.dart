@@ -47,8 +47,5 @@ void main() {
     test('to test the property `qualPoints`', () async {
       // TODO
     });
-
-
   });
-
 }

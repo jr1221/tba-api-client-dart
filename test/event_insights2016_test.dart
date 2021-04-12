@@ -149,8 +149,5 @@ void main() {
     test('to test the property `highScore`', () async {
       // TODO
     });
-
-
   });
-
 }

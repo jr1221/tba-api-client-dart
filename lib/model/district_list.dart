@@ -2,13 +2,13 @@ part of tba_api_client.api;
 
 class DistrictList {
   /* The short identifier for the district. */
-  String abbreviation = null;
+  String? abbreviation = null;
   /* The long name for the district. */
-  String displayName = null;
+  String? displayName = null;
   /* Key for this district, e.g. `2016ne`. */
-  String key = null;
+  String? key = null;
   /* Year this district participated. */
-  int year = null;
+  int? year = null;
   DistrictList();
 
   @override
@@ -16,7 +16,7 @@ class DistrictList {
     return 'DistrictList[abbreviation=$abbreviation, displayName=$displayName, key=$key, year=$year, ]';
   }
 
-  DistrictList.fromJson(Map<String, dynamic> json) {
+  DistrictList.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     abbreviation = json['abbreviation'];
     displayName = json['display_name'];
@@ -25,39 +25,38 @@ class DistrictList {
   }
 
   Map<String, dynamic> toJson() {
-    Map <String, dynamic> json = {};
-    if (abbreviation != null)
-      json['abbreviation'] = abbreviation;
-    if (displayName != null)
-      json['display_name'] = displayName;
-    if (key != null)
-      json['key'] = key;
-    if (year != null)
-      json['year'] = year;
+    Map<String, dynamic> json = {};
+    if (abbreviation != null) json['abbreviation'] = abbreviation;
+    if (displayName != null) json['display_name'] = displayName;
+    if (key != null) json['key'] = key;
+    if (year != null) json['year'] = year;
     return json;
   }
 
   static List<DistrictList> listFromJson(List<dynamic> json) {
-    return json == null ? List<DistrictList>() : json.map((value) => DistrictList.fromJson(value)).toList();
+    return json == null
+        ? <DistrictList>[]
+        : json.map((value) => DistrictList.fromJson(value)).toList();
   }
 
   static Map<String, DistrictList> mapFromJson(Map<String, dynamic> json) {
     var map = Map<String, DistrictList>();
     if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic value) => map[key] = DistrictList.fromJson(value));
+      json.forEach((String key, dynamic value) =>
+          map[key] = DistrictList.fromJson(value));
     }
     return map;
   }
 
   // maps a json object with a list of DistrictList-objects as value to a dart map
-  static Map<String, List<DistrictList>> mapListFromJson(Map<String, dynamic> json) {
+  static Map<String, List<DistrictList>> mapListFromJson(
+      Map<String, dynamic> json) {
     var map = Map<String, List<DistrictList>>();
-     if (json != null && json.isNotEmpty) {
-       json.forEach((String key, dynamic value) {
-         map[key] = DistrictList.listFromJson(value);
-       });
-     }
-     return map;
+    if (json != null && json.isNotEmpty) {
+      json.forEach((String key, dynamic value) {
+        map[key] = DistrictList.listFromJson(value);
+      });
+    }
+    return map;
   }
 }
-

@@ -3,12 +3,13 @@ part of tba_api_client.api;
 class ApiException implements Exception {
   int code = 0;
   String message;
-  Exception innerException;
-  StackTrace stackTrace;
+  Exception? innerException;
+  StackTrace? stackTrace;
 
   ApiException(this.code, this.message);
 
-  ApiException.withInner(this.code, this.message, this.innerException, this.stackTrace);
+  ApiException.withInner(
+      this.code, this.message, this.innerException, this.stackTrace);
 
   String toString() {
     if (message == null) return "ApiException";

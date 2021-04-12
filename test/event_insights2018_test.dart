@@ -188,25 +188,29 @@ void main() {
 
     // Average opposing switch denail percentage for the winning alliance during teleop.
     // double winningOppSwitchDenialPercentageTeleop (default value: null)
-    test('to test the property `winningOppSwitchDenialPercentageTeleop`', () async {
+    test('to test the property `winningOppSwitchDenialPercentageTeleop`',
+        () async {
       // TODO
     });
 
     // Average own switch ownership percentage for the winning alliance.
     // double winningOwnSwitchOwnershipPercentage (default value: null)
-    test('to test the property `winningOwnSwitchOwnershipPercentage`', () async {
+    test('to test the property `winningOwnSwitchOwnershipPercentage`',
+        () async {
       // TODO
     });
 
     // Average own switch ownership percentage for the winning alliance during auto.
     // double winningOwnSwitchOwnershipPercentageAuto (default value: null)
-    test('to test the property `winningOwnSwitchOwnershipPercentageAuto`', () async {
+    test('to test the property `winningOwnSwitchOwnershipPercentageAuto`',
+        () async {
       // TODO
     });
 
     // Average own switch ownership percentage for the winning alliance during teleop.
     // double winningOwnSwitchOwnershipPercentageTeleop (default value: null)
-    test('to test the property `winningOwnSwitchOwnershipPercentageTeleop`', () async {
+    test('to test the property `winningOwnSwitchOwnershipPercentageTeleop`',
+        () async {
       // TODO
     });
 
@@ -218,17 +222,16 @@ void main() {
 
     // Average scale ownership percentage for the winning alliance during auto.
     // double winningScaleOwnershipPercentageAuto (default value: null)
-    test('to test the property `winningScaleOwnershipPercentageAuto`', () async {
+    test('to test the property `winningScaleOwnershipPercentageAuto`',
+        () async {
       // TODO
     });
 
     // Average scale ownership percentage for the winning alliance during teleop.
     // double winningScaleOwnershipPercentageTeleop (default value: null)
-    test('to test the property `winningScaleOwnershipPercentageTeleop`', () async {
+    test('to test the property `winningScaleOwnershipPercentageTeleop`',
+        () async {
       // TODO
     });
-
-
   });
-
 }

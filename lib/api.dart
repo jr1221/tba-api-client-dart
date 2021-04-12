@@ -79,5 +79,4 @@ part 'model/zebra.dart';
 part 'model/zebra_alliances.dart';
 part 'model/zebra_team.dart';
 
-
 ApiClient defaultApiClient = ApiClient();

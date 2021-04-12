@@ -17,8 +17,5 @@ void main() {
     test('to test the property `latestAppVersion`', () async {
       // TODO
     });
-
-
   });
-
 }
